@@ -1,11 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 06</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Calculation Master Web Application</title>
 </head>
 <body>
-    
+    <div class="main-container">
+        <div class="left-box">
+            <div class="addition boxes">
+                <div class="shape">
+                    <h2>Addition</h2>
+                </div>
+                <div class="formula">
+                    Fourmula = a + b
+                </div>
+                <div class="input">
+                    <label for="num1">First num:</label>
+                    <input type="text" name="num1" id="num1" placeholder="Enter first number" />
+                    <br />
+                    <label for="num2">Second num:</label>
+                    <input type="number" name="num2" id="num2" placeholder="Enter second number"/>
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="addTwoNum()"/>
+                </div>
+            </div>
+            <div class="subtraction boxes">
+                <div class="shape">
+                    <h2>Subtraction</h2>
+                </div>
+                <div class="formula">
+                    Fourmula = a - b
+                </div>
+                <div class="input">
+                    <label for="subnum1">First num:</label>
+                    <input type="text" name="subnum1" id="subnum1" placeholder="Enter first number" />
+                    <br />
+                    <label for="subnum2">Second num:</label>
+                    <input type="number" name="subnum2" id="subnum2" placeholder="Enter second number"/>
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="subTwoNum()"/>
+                </div>
+            </div>
+            <div class="Multiplication boxes">
+                <div class="shape">
+                    <h2>Multiplication</h2>
+                </div>
+                <div class="formula">
+                    Fourmula = a * b
+                </div>
+                <div class="input">
+                    <label for="mulnum1">First num:</label>
+                    <input type="text" name="mulnum1" id="mulnum1" placeholder="Enter first number" />
+                    <br />
+                    <label for="mulnum2">Second num:</label>
+                    <input type="number" name="mulnum2" id="mulnum2" placeholder="Enter second number"/>
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="mulTwoNum()"/>
+                </div>
+            </div>
+            <div class="Division boxes">
+                <div class="shape">
+                    <h2>Division</h2>
+                </div>
+                <div class="formula">
+                    Fourmula = a / b
+                </div>
+                <div class="input">
+                    <label for="divnum1">First num:</label>
+                    <input type="text" name="divnum1" id="divnum1" placeholder="Enter first number" />
+                    <br />
+                    <label for="divnum2">Second num:</label>
+                    <input type="number" name="divnum2" id="divnum2" placeholder="Enter second number"/>
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="divTwoNum()"/>
+                </div>
+            </div>
+            <div class="Interest boxes">
+                <div class="shape">
+                    <h2>Interest</h2>
+                </div>
+                <div class="formula">
+                    Fourmula = ((sell - cost) * 100) / 100
+                </div>
+                <div class="input">
+                    <label for="fnum">Cost:</label>
+                    <input type="text" name="fnum" id="fnum" placeholder="Enter cost price" />
+                    <br />
+                    <label for="snum">Sell:</label>
+                    <input type="number" name="snum" id="snum" placeholder="Enter selling price"/>
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="interest()"/>
+                </div>
+            </div>
+            <div class="Remainder boxes">
+                <div class="shape">
+                    <h2>Remainder</h2>
+                </div>
+                <div class="formula">
+                    Fourmula = Divident % Divisor
+                </div>
+                <div class="input">
+                    <label for="divident">Divident:</label>
+                    <input type="text" name="divident" id="divident" placeholder="Enter divident number" />
+                    <br />
+                    <label for="divisor">Divisor:</label>
+                    <input type="number" name="divisor" id="divisor" placeholder="Enter divisor number"/>
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="remainder()"/>
+                </div>
+            </div>
+            <div class="triangle-area boxes">
+                <div class="shape">
+                    <h2>Triangle</h2>
+                </div>
+                <div class="formula">
+                    Fourmula = 1/2 * b * h
+                </div>
+                <div class="input">
+                    <label for="base">Base:</label>
+                    <input type="text" name="base" id="base" placeholder="Enter base in cm" />
+                    <br />
+                    <label for="height">Height:</label>
+                    <input type="number" name="height" id="height" placeholder="Enter height in cm"/>
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="triangleArea()"/>
+                </div>
+            </div>
+            <div class="rectangle boxes">
+                <div class="shape">
+                    <h2>Rectangle</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = Length * Width</h3>
+                </div>
+                <div class="input">
+                    <label for="length">Length:</label>
+                    <input type="text" name="length" id="length" placeholder="Enter Length in cm" />
+                    <br>
+                    <label for="width">Width:</label>
+                    <input type="text" name="width" id="width" placeholder="Enter Width in cm" />
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="rectangleArea()"/>
+                </div>
+            </div>
+            <div class="Parallelogram boxes">
+                <div class="shape">
+                    <h2>Parallelogram</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = Base * Height</h3>
+                </div>
+                <div class="input">
+                    <label for="para-base">Base:</label>
+                    <input type="text" name="para-base" id="para-base" placeholder="Enter base in cm" />
+                    <br>
+                    <label for="para-height">Height:</label>
+                    <input type="text" name="para-height" id="para-height" placeholder="Enter height in cm" />
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="parallelogramArea()"/>
+                </div>
+            </div>
+            <div class="Rhombus  boxes">
+                <div class="shape">
+                    <h2>Rhombus</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = 1/2 * d1 * d2</h3>
+                </div>
+                <div class="input">
+                    <label for="diagon">Diagon 1:</label>
+                    <input type="text" name="diagon" id="diagon" placeholder="Enter diagon in cm" />
+                    <br>
+                    <label for="diagon-2">Diagon 2:</label>
+                    <input type="text" name="diagon-2" id="diagon-2" placeholder="Enter diagon in cm" />
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="rhombusArea()"/>
+                </div>
+            </div>
+            <div class="Ellipse boxes">
+                <div class="shape">
+                    <h2>Ellipse</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = (PI) * a * b</h3>
+                </div>
+                <div class="input">
+                    <label for="major">Major Axis:</label>
+                    <input type="text" name="major" id="major" placeholder="Enter major axis in cm" />
+                    <br>
+                    <label for="minor">Minor Axis:</label>
+                    <input type="text" name="minor" id="minor" placeholder="Enter minor axis in cm" />
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="ellipseArea()"/>
+                </div>
+            </div>
+            <div class="Trapezoid boxes">
+                <div class="shape">
+                    <h2>Trapezoid</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = 1/2 *(a+b)*h</h3>
+                </div>
+                <div class="input">
+                    <label for="base-a">Base A:</label>
+                    <input type="text" name="base-a" id="base-a" placeholder="Enter base A in cm" />
+                    <br>
+                    <label for="base-b">Base B:</label>
+                    <input type="text" name="base-b" id="base-b" placeholder="Enter base B in cm" />
+                    <br />
+                    <label for="theight">Height:</label>
+                    <input type="text" name="theight" id="theight" placeholder="Enter height in cm" />
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="trapezoidArea()"/>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="circle-area boxes">
+                <div class="shape">
+                    <h2>Circle</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = π* r * r</h3>
+                </div>
+                <div class="input">
+                    <label for="radius">Radius:</label>
+                    <input type="text" name="radius" id="radius" placeholder="Enter Radius of the circle" />
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="circleArea()"/>
+                </div>
+            </div>
+            <div class="far-to-cels boxes">
+                <div class="shape">
+                    <h2>Fahrenheit to Celsius</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = 5/9 (F- 32)</h3>
+                </div>
+                <div class="input">
+                    <label for="far">Fahrenheit:</label>
+                    <input type="text" name="far" id="far" placeholder="Enter Fahrenheit unit" />
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="far2cels()"/>
+                </div>
+            </div>
+            <div class="cels-to-far boxes">
+                <div class="shape">
+                    <h2>Celsius to Fahrenheit</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = C (9/5) + 32</h3>
+                </div>
+                <div class="input">
+                    <label for="cels">Celsius:</label>
+                    <input type="text" name="cels" id="cels" placeholder="Enter Celsius unit" />
+                    <br />
+                    <input type="submit" value="Calculate" class="submit" onclick="cels2far()"/>
+                </div>
+            </div>
+            <div class="square boxes">
+                <div class="shape">
+                    <h2>Square</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = arm * arm</h3>
+                </div>
+                <div class="input">
+                    <label for="arm">Arm:</label>
+                    <input type="text" name="arm" id="arm" placeholder="Enter an arm in cm" />
+                    <br>
+                    <input type="submit" value="Calculate" class="submit" onclick="squareArea()"/>
+                </div>
+            </div>
+            <div class="cube boxes">
+                <div class="shape">
+                    <h2>Cube</h2>
+                </div>
+                <div class="formula">
+                    <h3>Fourmula = 6 * arm * arm</h3>
+                </div>
+                <div class="input">
+                    <label for="carm">Arm:</label>
+                    <input type="text" name="carm" id="carm" placeholder="Enter an arm in cm" />
+                    <br>
+                    <input type="submit" value="Calculate" class="submit" onclick="cubeArea()"/>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="right-box">
+            <div class="result">
+                Result: <span id="result">...</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<footer style="text-align: center;">
+    <h3>Calculation Master Web Application</h3>
+</footer>
+    <script src="./script.js"></script>
 </body>
 </html>
